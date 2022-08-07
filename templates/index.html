@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      .content{max-width: 500px; 
+        margin: auto; 
+        font-family: 
+        sans-serif; 
+        font-style: 
+        italic;
+        font-size: 16px;}
+      #page { margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+         color: steelblue;
+        font-size: 45px;
+        font-weight: bold;
+      }
+      #enter {font-size: 25px;}
+      #input {
+        width: 370px;
+        height: 20px;
+      }
+      #search {background-color: steelblue;
+        border: none;
+        color: white;
+        padding: 6px 15px;
+        text-align: r;
+        text-decoration: none;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="content">
+        <p id = "page"> ALICE </p>
+        <form action="{% url 'results' %}" method="get">
+         <p id ="enter">Please enter the text you want to search.</p><br>
+            <input name="q" id = "input" type="text" placeholder="Search...">
+            <button id="search">Search</button> <br>
+        </form>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+      .tweet{max-width: 500px; margin: auto; font-family: sans-serif; font-style: italic; font-size: 16px;}
+      #page { margin-right: auto;
+                      margin-left: auto;
+                      text-align: center;
+                      color: steelblue;
+                      font-size: 45px;
+                      font-weight: bold;
+                      }
+      .collapsible {
+        background-color: steelblue;
+        color: white;
+        cursor: pointer;
+        padding: 4px 16px;
+        text-align: center;
+        margin-left: auto;
+      }
+      .content {
+          padding: 0 18px;
+          display: none;
+          overflow: hidden;
+          background-color: #f1f1f1;
+          font-family: 'Tahoma', monospace;
+          font-size: 15px;
+      }
+
+		</style>
+	</head>
+	<body>
+	    <div class="tweet">
+        <p id = "page"> ALICE </p>
+        <h3>The tweet you searched is </h3>
+        <form action="{% url 'thank' %}" method="get">
+          <input name="query" id = "input" type="text" value= "{{query}}" readonly>
+        <!-- </form> -->
+        <p>The tweet is classified as</p>
+        <!-- <form action="{% url 'thank' %}" method="post"> -->
+          <input name="res" id = "result" type="text" value= {{var}} readonly>
+        <!-- </form> -->
+        <button type="button" class="collapsible">Show More</button>
+        <div class="content">
+          <p>The combination of NLP models and API searches provided the following probabilities for the text you searched-<br>
+          True: {{pr2}}<br>
+          False: {{pr3}}<br>
+          Unclassified: {{pr1}}<br></p> 
+        </div>
+        <div>
+          <p>Do you agree with the classification?</p>
+          <!-- <form action="{% url 'thank' %}" method="post"> -->
+            <input id="yes" type="radio" name="feedback" value="YES">
+            <label for="yes">Yes</label>
+            <input id="no" type="radio" name="feedback" value="NO">
+            <label for="your_name">No</label>
+            <input type="submit" value="SUBMIT">
+          </form>
+        </div>
+		  </div>
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
+	</body>
+</html>

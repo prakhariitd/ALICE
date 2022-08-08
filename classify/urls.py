@@ -6,4 +6,4 @@ urlpatterns = [
     path("results/", results, name="results"),
     path("", index, name="index"),
     path("thank/", thank, name="thank"),
-]
+] 

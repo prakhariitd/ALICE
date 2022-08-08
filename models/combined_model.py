@@ -12,7 +12,7 @@ def classify(tweet):
 	model_loc = './bert_model'
 	pred1 = bert.classify(tweet, model_loc)
 
-	return np.argmax(pred1), pred1
+	return np.argmax(pred1), pred1 #only BERT being used
 
 	pred2 = gpt3.classify(tweet)
 
@@ -39,4 +39,4 @@ def classify(tweet):
 
 	return pred3
 
-classify("Covid is fake")
+# classify("Covid is fake")

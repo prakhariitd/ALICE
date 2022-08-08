@@ -1,3 +1,4 @@
+{% load static %} 
 <!doctype html>
 <html>
   <head>
@@ -30,7 +31,7 @@
   </head>
   <body>
       <div class="content">
-        <img src="image.png" width="75%" height="75%" class="center"  alt="Woof Woof!">  
+        <img src="{% static 'image.png' %}" width="75%" height="75%" class="center"  alt="Woof Woof!">  
         <form action="{% url 'results' %}" method="get">
          <p id ="enter">Please enter the text you want to check</p><br>
             <input name="q" id = "input" type="text" placeholder="Search...">

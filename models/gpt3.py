@@ -64,4 +64,4 @@ def classify(tweet):
 
 if __name__ == "__main__":
     tweet = "israel economy is bad"
-    classify(tweet)
+    # classify(tweet)

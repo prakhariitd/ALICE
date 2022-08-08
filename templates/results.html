@@ -1,3 +1,4 @@
+{% load static %} 
 <!doctype html>
 <html>
 	<head>
@@ -75,7 +76,7 @@
 	</head>
 	<body>
 	    <div class="tweet">
-        <img src="image.png" width="75%" height="75%" class="center"  alt="Woof Woof!">
+        <img src="{% static 'image.png' %}" width="75%" height="75%" class="center"  alt="Woof Woof!">  
         <h3>The text you checked is </h3>
         <form action="{% url 'thank' %}" method="get">
           <input name="query" id = "input" class="input-field" type="text" value= "{{query}}" readonly>

@@ -1,9 +1,41 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Thank you</title>
+        <style>
+          .container{
+            max-width: 500px; 
+            margin: auto; 
+            font-family: sans-serif; 
+            font-size: 16px;
+            text-align: center;
+            display: grid;
+            place-content: center;
+            height: 80vh;
+            width: 100vw;
+          }
+          .submit {
+            background-color: #f9a04f;
+            color: white;
+            cursor: pointer;
+            padding: .875rem 2rem;
+            height:  43px;
+            text-align: center;
+            border:  1px solid #f9a04f;
+            transition:  all .2s ease-in-out;
+          }
+
+          .submit:hover{
+            background-color: #f5d2b1;
+            color:  black;
+          }
+        </style>
+        <div class="container"> 
+          <title>Thank you</title>
+          <h3>Thank you for your feedback!</h3>
+          <a href="http://127.0.0.1:8000/" class="submit" >Start a new search</a>
+        </div>
     </head>
     <body>
-        <h3>Thank you for your feedback!</h3>
+       
     </body>
 </html>

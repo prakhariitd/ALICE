@@ -6,36 +6,33 @@
         margin: auto; 
         font-family: 
         sans-serif; 
-        font-style: 
-        italic;
-        font-size: 16px;}
-      #page { margin-right: auto;
-        margin-left: auto;
-        text-align: center;
-         color: steelblue;
-        font-size: 45px;
-        font-weight: bold;
-      }
+        font-size: 16px;
+        text-align: center}
       #enter {font-size: 25px;}
       #input {
         width: 370px;
-        height: 20px;
+        height: 31px;
       }
-      #search {background-color: steelblue;
+      #search {background-color: #f9a04f;
         border: none;
         color: white;
-        padding: 6px 15px;
+        padding: 11px 20px;
         text-align: r;
         text-decoration: none;
         display: inline-block;
+        transition:  all .2s ease-in-out;
+      }
+      #search:hover{
+        background-color: #f5d2b1;
+        color:  black;
       }
     </style>
   </head>
   <body>
       <div class="content">
-        <p id = "page"> ALICE </p>
+        <img src="image.png" width="75%" height="75%" class="center"  alt="Woof Woof!">  
         <form action="{% url 'results' %}" method="get">
-         <p id ="enter">Please enter the text you want to search.</p><br>
+         <p id ="enter">Please enter the text you want to check</p><br>
             <input name="q" id = "input" type="text" placeholder="Search...">
             <button id="search">Search</button> <br>
         </form>

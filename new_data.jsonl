@@ -4,3 +4,5 @@
 {"text": "covid came from china", "label": "Unclassified"}
 {"text": "covid good", "label": "Unclassified"}
 {"text": "gargling cures coronavirus", "label": "False"}
+{"text": "covid19 is malaria", "label": "False"}
+{"text": "covid19 is not malaria", "label": "True"}
